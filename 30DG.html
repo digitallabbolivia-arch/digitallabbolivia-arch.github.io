@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#282a2b",
+                    "on-primary-fixed-variant": "#5300cd",
+                    "on-tertiary": "#313030",
+                    "surface-container": "#1d2021",
+                    "tertiary": "#c9c6c5",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-surface": "#e1e3e4",
+                    "surface-bright": "#373a3b",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#22005d",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "background": "#0A0A0A",
+                    "secondary-fixed": "#ffe088",
+                    "inverse-primary": "#6d23f9",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-secondary": "#3c2f00",
+                    "surface-dim": "#111415",
+                    "surface-container-low": "#191c1d",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-tint": "#cfbdff",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "tertiary-container": "#545353",
+                    "surface-variant": "#323536",
+                    "primary-fixed-dim": "#cfbdff",
+                    "error": "#ffb4ab",
+                    "primary": "#cfbdff",
+                    "on-primary": "#3a0093",
+                    "on-error": "#690005",
+                    "primary-fixed": "#e8ddff",
+                    "on-secondary-container": "#342800",
+                    "outline": "#948da2",
+                    "secondary": "#e9c349",
+                    "on-primary-container": "#d0beff",
+                    "surface-container-highest": "#323536",
+                    "surface": "#111415",
+                    "outline-variant": "#494456",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#241a00",
+                    "on-background": "#e1e3e4",
+                    "primary-container": "#6200ee",
+                    "on-surface-variant": "#cbc3d9",
+                    "on-tertiary-container": "#cac7c6",
+                    "surface-container-lowest": "#0c0f10",
+                    "inverse-surface": "#e1e3e4",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "inverse-on-surface": "#2e3132",
+                    "secondary-container": "#af8d11"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "stack-sm": "12px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Epilogue"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-xl": ["Epilogue"],
+                    "headline-md": ["Epilogue"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["3rem", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["0.75rem", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-md": ["1rem", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-xl": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid #222222;
+        }
+        .purple-glow {
+            box-shadow: 0 0 40px rgba(98, 0, 238, 0.15);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 20px rgba(233, 195, 73, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-[#222222] shadow-2xl shadow-purple-900/10">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto font-['Epilogue'] tracking-tight">
+<div class="text-xl font-bold tracking-tighter text-white">De Prospección a Cierre 30D</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-gray-400 font-medium hover:text-white transition-colors duration-300 cursor-pointer active:scale-95" href="#beneficios">Beneficios</a>
+<a class="text-gray-400 font-medium hover:text-white transition-colors duration-300 cursor-pointer active:scale-95" href="#programa">Programa</a>
+<a class="text-gray-400 font-medium hover:text-white transition-colors duration-300 cursor-pointer active:scale-95" href="#testimonios">Testimonios</a>
+<a class="text-gray-400 font-medium hover:text-white transition-colors duration-300 cursor-pointer active:scale-95" href="#faq">FAQ</a>
+<button class="bg-primary-container text-white px-6 py-2 font-bold tracking-tighter cursor-pointer active:scale-95 transition-all gold-glow">RESERVAR MI LUGAR</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 px-6 overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full -z-10"></div>
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-stack-md">
+<span class="text-secondary font-label-caps tracking-widest bg-secondary-container/20 px-4 py-1 inline-block border border-secondary/30">ELITE MASTERMIND 30D</span>
+<h1 class="font-display-xl text-display-xl text-white">De Prospección a Cierre 30D</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Implementa en 6 horas un sistema probado para generar más leads, conversaciones, visitas y cierres constantes en los próximos 30 días.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface">Elimina la dependencia de la "suerte" en tu negocio inmobiliario.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface">Sustituye la improvisación por un embudo de ventas matemático.</span>
+</li>
+</ul>
+<div class="pt-6">
+<button class="bg-primary-container text-white text-lg font-bold px-10 py-5 transition-all hover:scale-105 gold-glow active:scale-95">RESERVAR MI LUGAR</button>
+</div>
+</div>
+<div class="relative">
+<div class="glass-card p-6 purple-glow rounded-xl overflow-hidden">
+<img alt="Dashboard de Ventas" class="w-full h-auto rounded-lg grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated dark-themed digital sales dashboard showcasing complex real estate metrics, pipeline growth charts, and performance analytics. The UI is sleek with deep purple and champagne gold accents, set against a rich black background with subtle neon glows. The overall atmosphere is one of high-tech professional data mastery and exclusive financial performance monitoring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8jt_DeDx_NaN5MyHWH2k_p-BfH6v4VBGv11VMiuKunAE6lEiXlL2svsBvlFLzM3-66OcS1Y0RwaqAK_4GqSeNHpVcpYyILzdNv212wRD0IfoTEOGBnIHUfLzMxO7mKT_rYNChK9WeHGudzRlyDcnFhW5sYNyyGI7Hh0Tvtlhf_XpcCVPChndd8z22WibZHTBa_FCnISTdW0BwRh0IWs4Txput5YRaMqRvv2d9_tfUTYFVtpHw8nPBoL_K2HhWnSbMShcSk8z2r-zR"/>
+<div class="absolute bottom-10 right-10 bg-secondary px-6 py-4 rounded-lg text-on-secondary font-bold flex items-center gap-3 shadow-2xl">
+<span class="material-symbols-outlined">trending_up</span>
+<span>+42% Conversión</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Problem Section -->
+<section class="py-24 px-6 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">El 90% de los asesores falla por falta de sistema</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">La mayoría trabaja duro, pero sin dirección. El agotamiento viene de la ineficiencia, no del esfuerzo.</p>
+</div>
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+<div class="glass-card p-8 border-l-4 border-error/50">
+<span class="material-symbols-outlined text-error mb-4 text-4xl">warning</span>
+<h3 class="text-white font-bold text-xl mb-3">Seguimiento Pobre</h3>
+<p class="text-on-surface-variant">Los leads se "enfrían" porque no tienes un proceso automatizado ni scripts que generen urgencia.</p>
+</div>
+<div class="glass-card p-8 border-l-4 border-error/50">
+<span class="material-symbols-outlined text-error mb-4 text-4xl">analytics</span>
+<h3 class="text-white font-bold text-xl mb-3">Baja Conversión</h3>
+<p class="text-on-surface-variant">Generas curiosos, no interesados. Tu mensaje no filtra a los prospectos calificados de los turistas.</p>
+</div>
+<div class="glass-card p-8 border-l-4 border-error/50">
+<span class="material-symbols-outlined text-error mb-4 text-4xl">schedule</span>
+<h3 class="text-white font-bold text-xl mb-3">Montaña Rusa</h3>
+<p class="text-on-surface-variant">Un mes cierras mucho, tres meses nada. Vives en la incertidumbre constante del próximo cheque.</p>
+</div>
+</div>
+</section>
+<!-- 30-Day Outcome -->
+<section class="py-24 px-6 relative overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white">Tu Transformación en 30 Días</h2>
+<p class="text-on-surface-variant">De la confusión a la claridad absoluta en 4 semanas.</p>
+</div>
+<div class="bg-surface-container-high p-4 flex items-center gap-4">
+<span class="text-secondary font-bold">PROGRESO DEL PROGRAMA</span>
+<div class="w-32 h-2 bg-background rounded-full overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container"></div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="glass-card p-10 relative">
+<div class="absolute -top-6 -left-6 w-16 h-16 bg-primary-container text-white flex items-center justify-center font-bold text-2xl rounded-lg">1-7</div>
+<h3 class="text-white font-headline-md text-headline-md mb-6">Claridad y Nicho</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                            Definición de Avatar de Inversionista/Comprador Ideal.
+                        </li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                            Configuración de tu CRM y Pipeline de Ventas.
+                        </li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                            Lanzamiento de tu Primera Campaña de Prospección.
+                        </li>
+</ul>
+</div>
+<div class="glass-card p-10 relative">
+<div class="absolute -top-6 -left-6 w-16 h-16 bg-secondary text-on-secondary flex items-center justify-center font-bold text-2xl rounded-lg">8-30</div>
+<h3 class="text-white font-headline-md text-headline-md mb-6">Escalamiento y Cierre</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                            Optimización de Conversación en WhatsApp.
+                        </li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                            Agendamiento Masivo de Visitas Físicas/Demos.
+                        </li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                            Cierre de Ventas con Scripts de Alta Persuasión.
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-Day Program Schedule -->
+<section class="py-24 px-6 bg-[#050505]" id="programa">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<span class="text-secondary font-label-caps">INTENSIVO EN VIVO</span>
+<h2 class="font-headline-lg text-headline-lg text-white mt-4">Calendario de Implementación Directa</h2>
+</div>
+<div class="max-w-5xl mx-auto space-y-8">
+<div class="flex flex-col md:flex-row gap-8 items-stretch">
+<div class="md:w-1/4 glass-card p-8 text-center flex flex-col justify-center">
+<div class="text-primary font-bold text-lg">DÍA 01</div>
+<div class="text-white text-3xl font-black">SISTEMA</div>
+</div>
+<div class="md:w-3/4 glass-card p-8 flex items-center">
+<p class="text-on-surface-variant text-lg">Construcción del motor de prospección. Automatización de entrada de leads y primera toma de contacto sin esfuerzo manual.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-stretch">
+<div class="md:w-1/4 glass-card p-8 text-center flex flex-col justify-center border-primary-container/40">
+<div class="text-primary font-bold text-lg">DÍA 02</div>
+<div class="text-white text-3xl font-black">CONVERSIÓN</div>
+</div>
+<div class="md:w-3/4 glass-card p-8 flex items-center">
+<p class="text-on-surface-variant text-lg">Psicología de venta y manejo de objeciones. Cómo transformar un "solo pregunto" en una cita agendada en tu calendario.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-stretch">
+<div class="md:w-1/4 glass-card p-8 text-center flex flex-col justify-center border-secondary/40">
+<div class="text-primary font-bold text-lg">DÍA 03</div>
+<div class="text-white text-3xl font-black">SIMULACIÓN</div>
+</div>
+<div class="md:w-3/4 glass-card p-8 flex items-center">
+<p class="text-on-surface-variant text-lg">Roleplay intensivo y auditoría de tu sistema personal. Sal de la sesión con tu ecosistema funcionando al 100%.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="py-24 px-6 border-y border-[#222222]">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">No necesitas más leads...</h2>
+<h3 class="font-headline-md text-headline-md text-secondary">...necesitas saber qué hacer con ellos.</h3>
+</div>
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="p-6 bg-surface-container-low/50 rounded-lg">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error">close</span>
+<span class="text-error font-bold text-xl uppercase">Antes: Caos Total</span>
+</div>
+<ul class="space-y-3 text-on-surface-variant">
+<li>• Haces publicaciones y esperas suerte.</li>
+<li>• Contestas WhatsApp cuando te acuerdas.</li>
+<li>• Tu seguimiento termina después de 2 días.</li>
+<li>• No sabes cuánto te cuesta cada cliente.</li>
+</ul>
+</div>
+<div class="p-6 bg-primary-container/10 border border-primary-container/30 rounded-lg">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-secondary font-bold text-xl uppercase">Después: Sistema 30D</span>
+</div>
+<ul class="space-y-3 text-white">
+<li>• Pipeline visible con etapas claras.</li>
+<li>• Respuestas automáticas y personalizadas.</li>
+<li>• Seguimiento infinito (Nurturing) activado.</li>
+<li>• Previsibilidad absoluta de tus ingresos.</li>
+</ul>
+</div>
+</div>
+<div>
+<img alt="Comparativa de eficiencia" class="rounded-xl shadow-2xl border border-[#222222]" data-alt="A split-screen visual metaphor representing organizational chaos versus streamlined efficiency. On one side, a cluttered desk with messy papers and dark shadows representing the old way of real estate. On the other side, a clean, high-tech workspace with glowing holographic interfaces, structured graphs, and bright purple data flows representing the 30D system. The lighting transitions from chaotic darkness to a focused, premium professional glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi2QALVCA5da0_CwQE4l6M-XwZ3Uog62gEdmFDddgX4NUGd4yG4IamVwpx8E__CcUeO26j-DV87bpx33Fm7ySSSq5jJZKR6ISkW1_QyXRnmm7RsCi6hlHo0_tKm-hEbVIQnovxayC_Bq9BL6ecPMExuxQpDcoZQMEXAPCLbfxKvcHSmRzdNos11hXANWtBMdWXgj-h1QXv8iDY7LtltbpOWiVWXZZSaX8tC4Xze3ThE7mrb1zaQWBAH5CvhXWP8Xbsio-M3eG0UJUy"/>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 px-6 bg-surface-container-lowest" id="testimonios">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-white">Prueba Social Imbatible</h2>
+</div>
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+<div class="glass-card p-8">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white italic mb-6">"Pasé de 2 cierres al trimestre a 3 cierres mensuales constantes. El sistema de scripts de WhatsApp cambió mi negocio por completo."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Avatar Agente" data-alt="Close-up portrait of a successful, confident male real estate professional in a tailored navy blue suit, smiling warmly. The background is a blurred high-end urban office setting with soft, warm bokeh lighting. The image style is polished, corporate-premium, emphasizing trustworthiness and professional success." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVXjlzyJNsflkd3zlP7FKfNADnCs0nae1Mq8OJ8ibEDp-k85isJ2KnDzfpbPq0aBiwICbjXLarAqFPlQR3uBhI42GV_VrWdZRuoxQSVj5kq2ajjPFoo-2gOZSiz2GwjyHtGUy--AJf-f1d-esyu7aq2tpVvguKV50v8e6xP_YT7gEhvI_9eY2YwtWnOvNYfaE_7i4Rv4pIoWQkJluQtpjAzCYulyeGd0_MBFP0FY94pzU_zVAdFtKBkiob2H34NiYOfCIEhYf7KMbS"/>
+</div>
+<div>
+<div class="text-white font-bold">Roberto Méndez</div>
+<div class="text-on-surface-variant text-sm">Top Producer, CDMX</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 border-primary-container/20">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white italic mb-6">"Antes me daba miedo cobrar mi comisión. Ahora los clientes me ven como el experto que resuelve sus problemas de inversión."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Avatar Agente" data-alt="Elegant and professional portrait of a successful female real estate agent in a modern cream-colored blazer. She is smiling confidently in a minimalist architectural office with clean lines and soft, natural lighting. The overall mood is sophisticated, authoritative, and welcoming, fitting a high-stakes mastermind aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRatK9eVD3zjdTEsvjMlw00xxzs_y6714Zzii3Ryhr2QWVdfpzaILfavvtRXNWYv_5XqzNKInIF3LKy01kwpQWDQ9E6hl6vZGpLDtj9pe9x8CIxsqwP9UsFojUcfaSSD_97kiyCbnB4I4J-STRgkobLzAtJPY8HvlI1R8SPTKZGZJm174hUz8rjb-_jsPT8MCdYIjFxTqBQ515vw3BWSBxb5ztUAaHoOBb2KPYEa8D_o1SVbhF8FERRWw52Wi4-0bEeuFCdGZNzQDl"/>
+</div>
+<div>
+<div class="text-white font-bold">Elena Castillo</div>
+<div class="text-on-surface-variant text-sm">Broker Independiente</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white italic mb-6">"Los 3 días intensivos pagaron mi inversión 10 veces en la primera semana. Es la mejor inversión que he hecho en mi formación."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Avatar Agente" data-alt="Professional portrait of a middle-aged male entrepreneur with a focused expression, wearing a stylish dark grey shirt. He is standing in a luxury lounge with warm ambient lighting and leather textures in the background. The visual style reflects deep experience, authority, and financial mastery within the real estate industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCmXQB_kM6v8fJhLdeamCcjXWs2Pj6nrapgde_uNk_Ck78QQ2Ku4lkzen5pvcPmqdOcNSlR8maWVyQ8kxTB-9s00meaBh88OXRAqkTzaKKDmvw_xDwvYPMaFGHW-VnTWydC2tVkMGYo67PZ47Fh1I7ffVCoIuMb1l5ExIff-mOv6JK4fxlaHggRS0kw8mzYm5RAB7DRIJZGaOwB8boPKRxDeVLd7u9WYXeNhUAfmI4IJ4PLSm63D775mAJXtyJIsGrTH56tRQKZB0g"/>
+</div>
+<div>
+<div class="text-white font-bold">Javier Sosa</div>
+<div class="text-on-surface-variant text-sm">Director Comercial</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bonuses -->
+<section class="py-24 px-6 relative">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-white mb-12 text-center">Bonus Exclusivos de Implementación</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="glass-card p-8 flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-4xl">description</span>
+<div>
+<h3 class="text-white font-bold mb-2">Scripts de WhatsApp</h3>
+<p class="text-on-surface-variant text-sm">Plantillas "Copy-Paste" para revivir leads muertos y cerrar citas.</p>
+</div>
+</div>
+<div class="glass-card p-8 flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-4xl">view_kanban</span>
+<div>
+<h3 class="text-white font-bold mb-2">Pipeline Master 2024</h3>
+<p class="text-on-surface-variant text-sm">Tu tablero de control pre-configurado para que no pierdas ni un lead.</p>
+</div>
+</div>
+<div class="glass-card p-8 flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-4xl">event_repeat</span>
+<div>
+<h3 class="text-white font-bold mb-2">Agenda del Productor</h3>
+<p class="text-on-surface-variant text-sm">La rutina exacta minuto a minuto de los asesores que facturan 6 cifras.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-6">
+<div class="max-w-4xl mx-auto glass-card p-12 text-center relative overflow-hidden border-2 border-primary-container">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">¿Listo para dejar de "esperar" y empezar a "cerrar"?</h2>
+<p class="text-on-surface-variant text-lg mb-10">Inscríbete hoy y obtén acceso inmediato a la plataforma de pre-trabajo y los bonus exclusivos.</p>
+<div class="flex flex-col items-center gap-4">
+<button class="bg-primary-container text-white text-xl font-bold px-12 py-6 gold-glow transition-all hover:scale-105 active:scale-95 w-full md:w-auto uppercase tracking-wider">Quiero Mi Sistema 30D</button>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-secondary" style="font-size: 16px;">lock</span>
+                    Pago 100% seguro y encriptado
+                </div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="py-24 px-6 bg-surface-container-lowest border-t border-[#222222]" id="faq">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-white mb-12 text-center">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<details class="glass-card group" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="text-white font-bold">¿Necesito experiencia previa en marketing digital?</span>
+<span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        No. El sistema está diseñado para ser implementado paso a paso, incluso si nunca has hecho una campaña publicitaria. Nos enfocamos en la estrategia y la herramienta, no solo en la técnica.
+                    </div>
+</details>
+<details class="glass-card group">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="text-white font-bold">¿Qué pasa si no tengo presupuesto para publicidad?</span>
+<span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Enseñamos estrategias de "Prospección Orgánica de Alto Impacto" que puedes usar sin gastar un centavo, aunque el sistema brilla cuando le inyectas capital de forma controlada.
+                    </div>
+</details>
+<details class="glass-card group">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="text-white font-bold">¿Tengo garantía de resultados?</span>
+<span class="material-symbols-outlined text-primary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant">
+                        Si después de asistir a las 3 sesiones en vivo y aplicar los pasos sientes que no has recibido valor, te devolvemos el 100% de tu dinero sin preguntas incómodas.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-[#0A0A0A] w-full border-t border-[#222222] mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto gap-6 font-['Epilogue'] text-sm">
+<div class="text-lg font-black text-white">De Prospección a Cierre 30D</div>
+<div class="flex gap-8 text-gray-500">
+<a class="hover:text-[#6200EE] transition-colors" href="#">Privacidad</a>
+<a class="hover:text-[#6200EE] transition-colors" href="#">Términos</a>
+<a class="hover:text-[#6200EE] transition-colors" href="#">Contacto</a>
+</div>
+<div class="text-gray-500 text-center md:text-right">
+                © 2024 De Prospección a Cierre 30D. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+<!-- Sticky Mobile CTA -->
+<div class="fixed bottom-0 left-0 w-full p-4 md:hidden z-50 bg-[#0A0A0A]/95 border-t border-[#222222]">
+<button class="w-full bg-primary-container text-white py-4 font-bold text-center gold-glow">QUIERO MI LUGAR AHORA</button>
+</div>
+</body></html>
